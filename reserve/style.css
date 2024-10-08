@@ -51,13 +51,14 @@ header > ul > li {
     margin-left: 1em;
 }
 
-.hero-bg {
+.hero {
     background-image: url("images/bg.png");
     background-size: cover;
     height: 95vh;
-    width: 100vw;
-    z-index: -1;
-    position: absolute;
+    width: 100%;
+    /* position: absolute; */
+    margin-bottom: -1.5em;
+    margin-top: 0;
 }
 
 section {
@@ -65,6 +66,13 @@ section {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.5em;
+}
+
+.container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5em;
 }
 
 .title {
@@ -101,11 +109,11 @@ section {
     border: 1px solid rgb(172, 90, 70);
 }
 
-.hero {
+/* .hero {
     margin-bottom: 5em;
-}
+} */
 
-.beige {
+.beige, .hero>.container>button {
     font-family: Roboto;
     background-color: rgb(172, 90, 70);
     border: none;
@@ -135,24 +143,100 @@ section {
     font-weight: 100;
 }
 
+/* Gallery styles */
 .gallery-grid {
     margin-top: 1.5em;
     display: grid;
-    /* aspect-ratio: 16/9; */
-    /* grid-template-columns: 15em 15em 15em;
-    grid-template-rows: 10em 10em; */
     grid-template-columns: repeat(3, 20em); 
     justify-content: center;
     justify-items: start;
     gap: 0.5em;
 }
 
-
 .gallery-grid img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    cursor: pointer; /* Makes it clear the image is clickable */
+    transition: transform 0.3s ease;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content (the zoomed image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Caption for modal image */
+.caption-container {
+    text-align: center;
+    padding: 10px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* Close button (X) */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Previous/Next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    color: #bbb;
+}
+
 
 .text {
     font-family: Roboto;
@@ -198,7 +282,7 @@ section {
     font-weight: 100;
 }
 
-input[type="text"], input[type="email"], input[type="tel"] {
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -279,3 +363,262 @@ a {
     font-family: Roboto;
     color: white;
 }
+
+
+    @media only screen and (max-width: 600px) {  
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 3em;
+        }
+
+        header > ul {
+            flex-direction: column;
+        }
+
+        header > ul > li {
+            margin-left: 0;
+            margin-top: 1em;
+        }
+
+        .hero {
+            margin-bottom: 1em;
+            height: auto;
+            width: 135vw;
+        }
+
+        section {
+            margin-top: 0;
+        }
+
+        .pros {
+            width: 400px;
+            display: grid;
+            grid-template-columns: 18em;
+            grid-template-rows: 10em 10em 10em 10em 10em 10em;
+            margin-left: 0;
+            gap: 2em;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .title {
+            font-family: Roboto-thin;
+            font-weight: 100;
+            font-size: 3em;
+            width: 63%;
+            color: white;
+            margin-top: 6em;
+            margin-bottom: 0px;
+        }
+        
+        .slogan {
+            margin-top: 0px;
+            font-size: 1.5em;
+            color: white;
+            font-family: Roboto-thin;
+            font-weight: 100;
+        }
+
+        .gallery {
+            margin-top: 0;
+        }
+
+        .gallery-grid {
+        margin-left: 2em;
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .form-sec {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        /* align-content: center; */
+        align-items: center;
+    }
+
+    .form-sec p {
+        width: 95%;
+    }
+
+    .form-sec form {
+        width: 95%;
+    }
+
+    .contact-gallery {
+        flex-direction: column;
+    }
+
+    .form-left, .form-right {
+        width: 40%;
+    }
+
+    .form-right button {
+        font-family: Roboto;
+        background-color: rgb(172, 90, 70);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    footer {
+        min-width: 110vw;
+    }
+        
+    }
+  
+    @media only screen and (min-width: 601px) and (max-width: 768px) {  
+        header {
+            display: flex;
+            align-items: center;
+            margin-left: 3em;
+        }
+
+        header > ul {
+            flex-direction: column;
+        }
+
+        header > ul > li {
+            margin-left: 0;
+            margin-top: 1em;
+        }
+        
+
+        .hero {
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        section {
+            margin-top: 0;
+        }
+
+        .pros {
+            display: grid;
+            grid-template-columns: 18em;
+            grid-template-rows: 10em 10em 10em 10em 10em 10em;
+            margin-left: 0;
+            gap: 2em;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .gallery-grid {
+        grid-template-columns: 1fr 1fr; /* Single column for very small screens */
+    }
+
+    .form-sec {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        /* align-content: center; */
+        align-items: center;
+    }
+
+    .form-sec p {
+        width: 70%;
+    }
+
+    .form-sec form {
+        width: 90%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .form-left, .form-right {
+        width: 40%;
+    }
+
+    .contact-gallery {
+        flex-direction: column;
+    }
+
+
+    }
+  
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        header {
+            display: flex;
+            align-items: center;
+            margin-left: 3em;
+        }
+
+        header > ul {
+            flex-direction: column;
+        }
+
+        header > ul > li {
+            margin-left: 0;
+            margin-top: 1em;
+        }
+
+        .hero {
+            margin-bottom: 6em;
+            height: auto;
+        }
+
+        section {
+            margin-top: 0;
+        }
+
+        .pros {
+            display: grid;
+            grid-template-columns: 10em 20em;
+            grid-template-rows: 10em 10em 10em;
+            margin-left: 0;
+            gap: 2em;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .gallery-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Single column for very small screens */
+    }
+
+    .form-sec {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        /* align-content: center; */
+        align-items: center;
+    }
+
+    .form-sec p {
+        width: 70%;
+    }
+
+    .form-sec form {
+        width: 90%;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .form-left, .form-right {
+        width: 40%;
+    }
+
+    .contact-gallery {
+        flex-direction: column;
+        /* width: 70%; */
+        /* display: flex; */
+        /* align-content: center; */
+        /* justify-content: flex-start; */
+        /* align-items: center; */
+    }
+
+    }
+  
