@@ -372,11 +372,12 @@ a {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left: 3em;
+            margin-left: 5em;
         }
 
         header > ul {
             flex-direction: column;
+            padding: 0;
         }
 
         header > ul > li {
@@ -388,10 +389,13 @@ a {
             margin-bottom: 1em;
             height: auto;
             width: 135vw;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         section {
             margin-top: 0;
+            margin-left: 5em;
         }
 
         .pros {
@@ -473,7 +477,7 @@ a {
     }
 
     footer {
-        min-width: 110vw;
+        width: 135vw;
     }
         
     }

@@ -101,3 +101,4 @@ function updateOptions() {
         optionsSelect.appendChild(opt);
     });
 }
+

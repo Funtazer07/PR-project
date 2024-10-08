@@ -108,43 +108,41 @@
          </div>
          <div class="form-sec">
             <p>Aizpildiet veidlapu, un mūsu speciālists ar Jums sazināsies. Saņemiet atbildes uz visiem jautājumiem un speriet soli pretī savām jaunajām mājām Piekrasta Rezidence! Nepalaidiet garām iespēju - sāciet savu ceļojumu uz komfortablu dzīvi jau tagad!</p>
-            <form action="form.php" method="POST">
-               <!-- <input type="hidden" name="access_key" value="61b9708d-45d0-4a14-9e7c-fc985d45ec24"> -->
-               <!-- Left column -->
-               <div class="form-left">
-                  <label>
-                  Vārds:
-                  <input type="text" name="name" placeholder="Ivars Jekabsons" required>
-                  </label>
-                  <label>
-                  Tālruņa numurs:
-                  <input type="tel" name="phone" placeholder="+371 29999999" required>
-                  </label>
-                  <label>
-                  E-pasts:
-                  <input type="email" name="email" placeholder="example@email.com" required>
-                  </label>
-               </div>
-               <!-- Right column -->
-               <div class="form-right">
-                <label for="roomsSelect">
-                    Istabu skaits:
-                    <select id="roomsSelect" onchange="updateOptions()">
-                        <option value="">Izvēlieties istabu skaitu</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </label>
-            
-                <label for="optionsSelect">
-                    Platība, m2:
-                    <select id="optionsSelect">
-                        <option value="">Izvēlieties platību</option>
-                    </select>
-                </label>
-                  <button type="submit" class="beige">PIETIEKTIES</button>
-               </div>
-            </form>
+            <!-- <form action="https://api.web3forms.com/submit" method="POST"> -->
+               <form action="process.php" method="post">
+                  <div class="form-left">
+                      <label>
+                          Vārds:
+                          <input type="text" name="name" placeholder="Ivars Jekabsons" required>
+                      </label>
+                      <label>
+                          Tālruņa numurs:
+                          <input type="tel" name="phone" placeholder="+371 29999999" required>
+                      </label>
+                      <label>
+                          E-pasts:
+                          <input type="email" name="email" placeholder="example@email.com" required>
+                      </label>
+                  </div>
+                  <div class="form-right">
+                      <label for="roomsSelect">
+                          Istabu skaits:
+                          <select id="roomsSelect" name="istabas" onchange="updateOptions()">
+                              <option value="">Izvēlieties istabu skaitu</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                          </select>
+                      </label>
+          
+                      <label for="optionsSelect">
+                          Platība, m2:
+                          <select id="optionsSelect" name="area">
+                              <option value="">Izvēlieties platību</option>
+                          </select>
+                      </label>
+                      <button type="submit" class="beige">PIETIEKTIES</button>
+                  </div>
+              </form>
          </div>
       </section>
       <!-- form section end -->
