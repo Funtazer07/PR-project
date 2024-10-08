@@ -70,3 +70,34 @@ window.addEventListener('resize', function() {
         modal.style.display = "none"; // Ensure modal closes if screen is resized to small
     }
 });
+
+
+function updateOptions() {
+    // Get the selected number of rooms from the dropdown
+    var roomsSelect = document.getElementById("roomsSelect").value;
+
+    // Get the dropdown element for area options
+    var optionsSelect = document.getElementById("optionsSelect");
+
+    // Clear the current options in the area dropdown
+    optionsSelect.innerHTML = "";
+
+    // Define area options based on the selected number of rooms
+    var options = [];
+
+    if (roomsSelect === "2") {
+        options = ["61 m2","66 m2"];
+    } else if (roomsSelect === "3") {
+        options = ["61 m2","66 m2"];
+    } else {
+        options = ["Nav pieejamas opcijas"];
+    }
+
+    // Populate the area dropdown with the new options
+    options.forEach(function(option) {
+        var opt = document.createElement("option");
+        opt.value = option;
+        opt.innerHTML = option;
+        optionsSelect.appendChild(opt);
+    });
+}

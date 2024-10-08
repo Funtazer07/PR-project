@@ -127,14 +127,21 @@
                </div>
                <!-- Right column -->
                <div class="form-right">
-                  <label>
-                  Istabu skaits:
-                  <input type="number" name="rooms" placeholder="2" min = "1" max = "4">
-                  </label>
-                  <label>
-                  Platība,m2:
-                  <input type="text" name="area" placeholder="61">
-                  </label>
+                <label for="roomsSelect">
+                    Istabu skaits:
+                    <select id="roomsSelect" onchange="updateOptions()">
+                        <option value="">Izvēlieties istabu skaitu</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
+            
+                <label for="optionsSelect">
+                    Platība, m2:
+                    <select id="optionsSelect">
+                        <option value="">Izvēlieties platību</option>
+                    </select>
+                </label>
                   <button type="submit" class="beige">PIETIEKTIES</button>
                </div>
             </form>
@@ -163,7 +170,7 @@
                <li><a href="tel:+37120372017">+371 20372017</a></li>
             </ul>
             <picture>
-               <img src="images/ceslavs1.png" alt="image">
+               <img src="images/ceslavs2.png" alt="image">
             </picture>
             <ul class="contact-details">
                <li>
