@@ -40,3 +40,13 @@ function showSlides(n) {
     // Show the active image
     slides[slideIndex].classList.add('active');
 }
+
+document.getElementById('roomsSelect').addEventListener('change', function() {
+    var customInput = document.getElementById('customRoomInput');
+    if (this.value === 'Cits') {
+        customInput.style.display = 'block';  // Show input field
+    } else {
+        customInput.style.display = 'none';   // Hide input field
+        customInput.value = '';  // Clear the custom input if not selected
+    }
+});

@@ -138,6 +138,31 @@
          <form action="process.php" class="form-sec" method="post">
             <div class="form-left">
                <p>Atstājiet savas vecās mājas aiz muguras un sāciet jaunu dzīvi Piekrasta Rezidence! Piesakies apmaiņai jau tagad!</p>
+               <label for="roomsSelect">
+                  Mans dzīvoklis:
+                  <select id="roomsSelect" name="istabas">
+                     <option value="">Izvēlieties istabu skaitu</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="Cits">Cits</option>
+                 </select>
+                 
+                 <!-- Hidden input field initially -->
+                 <input type="number" id="customRoomInput" name="customRoom" style="display:none;" placeholder="Ievadiet savu skaitli" min="1">
+                 
+              </label>
+              <label for="optionsSelect">
+                  Velos apmainīt uz:
+                  <select id="optionsSelect" name="area">
+                      <option value="">Izvēlieties istabu skaitu</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+              </label>
             </div>
             <div class="form-right">
                <label>

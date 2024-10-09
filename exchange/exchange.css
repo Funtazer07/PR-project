@@ -299,7 +299,7 @@ section {
 	/* Add some padding inside the form for a cleaner look */
 	border-radius: 5px;
 	/* Optional: round the corners slightly */
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .form-left,
@@ -307,17 +307,11 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 50%;
+	width: 40%;
 }
 
-.form-left {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 50%;
-}
 
-.form-right label {
+.form-right label, .form-right label {
 	margin-bottom: 15px;
 }
 
@@ -347,6 +341,16 @@ input[type="number"],
 	width: 100%;
 	padding: 8px;
 	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#customRoomInput {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-sizing: border-box;
