@@ -6,6 +6,15 @@ document.getElementById("pietiekties").addEventListener("click", function() {
     targetElement.scrollIntoView({ behavior: "smooth" });
 });
 
+document.getElementById("uzzinat").addEventListener("click", function() {
+    // Select the target element you want to scroll to
+    const targetElement = document.getElementById("submit");
+
+    // Scroll smoothly to the target element
+    targetElement.scrollIntoView({ behavior: "smooth" });
+});
+
+
 
 // Get the modal
 var modal = document.getElementById("modal");
@@ -25,51 +34,32 @@ function isSmallScreen() {
     return window.innerWidth <= 480;
 }
 
-// Add click event listener to each image
-images.forEach((img, index) => {
-    img.addEventListener('click', function() {
-        if (!isSmallScreen()) {
-            // Only open the modal if the screen is larger than 480px
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-            currentIndex = index; // Set the current index for navigation
-        }
-    });
-});
+let slideIndex = 0;
+showSlides(slideIndex);
 
-// Close the modal when the close button is clicked
-var closeBtn = document.getElementsByClassName("close")[0];
-closeBtn.onclick = function() {
-    modal.style.display = "none";
+// Next/previous controls
+function changeSlide(n) {
+    showSlides(slideIndex += n);
 }
 
-// Navigation: move to previous image
-var prev = document.querySelector('.prev');
-prev.onclick = function() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateModalImage();
-}
-
-// Navigation: move to next image
-var next = document.querySelector('.next');
-next.onclick = function() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateModalImage();
-}
-
-// Update the modal with the new image and caption
-function updateModalImage() {
-    modalImg.src = images[currentIndex].src;
-    captionText.innerHTML = images[currentIndex].alt;
-}
-
-// Disable slideshow and modal functionality for small screens
-window.addEventListener('resize', function() {
-    if (isSmallScreen()) {
-        modal.style.display = "none"; // Ensure modal closes if screen is resized to small
+function showSlides(n) {
+    let slides = document.querySelectorAll('.slideshow-container picture');
+    if (n >= slides.length) {
+        slideIndex = 0; // Loop back to the first image
     }
-});
+    if (n < 0) {
+        slideIndex = slides.length - 1; // Loop to the last image
+    }
+    
+    // Hide all images
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    // Show the active image
+    slides[slideIndex].classList.add('active');
+}
+
 
 
 function updateOptions() {

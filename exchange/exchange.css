@@ -69,8 +69,10 @@ section {
 }
 
 .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        /* position: relative; */
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -100,7 +102,7 @@ section {
     margin-bottom: 3em;
 }
 
-.section > h1 {
+.section > h1, .gallery-section > h1 {
     font-weight: 100;
     font-family: Roboto;
 }
@@ -110,6 +112,29 @@ section {
     width: 4.5em;
     float: left;
     border: 1px solid rgb(172, 90, 70);
+}
+
+.gallery-section > hr {
+    margin-top: 0px;
+    width: 7em;
+    border: 1px solid rgb(172, 90, 70);
+}
+
+.gallery-section {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.gallery > h1 {
+    font-weight: 100;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* .hero {
@@ -140,104 +165,110 @@ section {
     gap: 5em;
 }
 
-.text>h2 {
+.kapec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center;
+    gap: 0.5em; /* Add some gap between the items */
+}
+
+.kapec>picture {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.kapec>picture>img {
+    width: 100%;
+}
+
+.kapec>picture:hover img {
+    filter: brightness(40%); /* Darken the image when hovered */
+    transition: 0.5s ease;
+}
+
+.kapec>picture:hover .centered {
+    display: block; /* Show the text when the picture is hovered */
+    transition: 0.5s ease;
+}
+
+.centered {
+    display: none; /* Initially hide the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Make sure the text color is visible */
+    text-align: center;
+}
+
+.centered * {
+    user-select: none;
+}
+
+.text>h2, .centered>h2 {
     font-size: 1.5em;
     font-family: Roboto;
     font-weight: 100;
 }
 
-/* Gallery styles */
-.gallery-grid {
-    margin-top: 1.5em;
-    display: grid;
-    grid-template-columns: repeat(3, 20em); 
-    justify-content: center;
-    justify-items: start;
-    gap: 0.5em;
+.centered>p {
+    font-size: 1.3em;
+    font-family: Roboto-Thin;
+    font-weight: 100;
 }
 
-.gallery-grid img {
+/* Gallery styles */
+.slideshow-container {
+    position: relative;
+    max-width: 85%;
+    margin: 0 auto auto auto;
+    overflow: hidden; /* Ensure images stay within the container */
+}
+
+.slideshow-container picture {
+    display: none; /* Hide all images initially */
+}
+
+.slideshow-container picture.active {
+    display: block; /* Show only the active image */
+}
+
+.gallery-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    cursor: pointer; /* Makes it clear the image is clickable */
     transition: transform 0.3s ease;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Modal Content (the zoomed image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-}
-
-/* Caption for modal image */
-.caption-container {
-    text-align: center;
-    padding: 10px;
-    color: #ccc;
-    font-size: 16px;
-}
-
-/* Close button (X) */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Previous/Next buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 24px;
-    transition: 0.3s;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
     user-select: none;
 }
 
 .prev {
     left: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .next {
     right: 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .prev:hover, .next:hover {
-    color: #bbb;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
 
@@ -246,23 +277,24 @@ section {
     font-weight: 100;
 }
 
-.form-sec {
+/* .form-sec {
     display: flex;
     width: 80%;
     margin-left: 7em;
-}
+} */
 
 .form-sec p {
     width: 60%;
 }
 
-.form-sec form {
-    width: 50%; /* Adjust the form width as needed */
+.form-sec {
     display: flex;
-    justify-content: space-between;
+    width: 70%;
+    margin-left: 7em;
     border: 1px solid black; /* Add 1px border with AC5A46 color */
     padding: 20px; /* Add some padding inside the form for a cleaner look */
     border-radius: 5px; /* Optional: round the corners slightly */
+    justify-content: center;
 }
 
 .form-left, .form-right {
@@ -272,8 +304,20 @@ section {
     width: 50%;
 }
 
+.form-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
 .form-left label, .form-right label {
     margin-bottom: 15px;
+}
+
+.form-left picture img {
+    width: 70%;
+    border-radius: 10px;
 }
 
 .form-right button {
@@ -375,7 +419,8 @@ a {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left: 5em;
+            margin-left: 4em;
+            /* margin: auto; */
         }
 
         header > ul {
@@ -396,9 +441,14 @@ a {
             margin-right: auto;
         }
 
+        .hero .container {
+            margin: auto;
+        }
+
         section {
-            margin-top: 0;
-            margin-left: 5em;
+            /* margin-top: 0; */
+            margin-left: 6em;
+            /* margin: auto; */
         }
 
         .pros {
@@ -418,13 +468,14 @@ a {
             font-family: Roboto-thin;
             font-weight: 100;
             font-size: 3em;
-            width: 63%;
+            width: 76%;
             color: white;
             margin-top: 6em;
             margin-bottom: 0px;
         }
         
         .slogan {
+            width: 50%;
             margin-top: 0px;
             font-size: 1.5em;
             color: white;
@@ -432,25 +483,40 @@ a {
             font-weight: 100;
         }
 
-        .gallery {
-            margin-top: 0;
+        .slideshow-container {
+            max-width: 100%;
         }
 
-        .gallery-grid {
-        margin-left: 2em;
-        grid-template-columns: 1fr; /* Single column for very small screens */
-    }
+        .prev, .next {
+            top: 40%;
+        }
+
+        .whypr .kapec {
+            width: 90%;
+            flex-direction: column;
+            margin-left: 3em;
+        }
+
+        .whypr .kapec .centered h2 {
+            font-size: 1.2em;
+        }
+
+        .whypr .kapec .centered p {
+            font-size: 0.9em;
+        }
 
     .form-sec {
+        width: 100%;
         display: flex;
         flex-direction: column;
         /* justify-content: flex-start; */
         /* align-content: center; */
         align-items: center;
+        margin-left: 0;
     }
 
     .form-sec p {
-        width: 60%;
+        width: 100%;
     }
 
     .form-sec form {
@@ -462,7 +528,7 @@ a {
     }
 
     .form-left, .form-right {
-        width: 40%;
+        width: 100%;
     }
 
     .form-right button {
@@ -488,30 +554,42 @@ a {
     @media only screen and (min-width: 601px) and (max-width: 768px) {  
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-left: 3em;
+            /* margin-left: 4em; */
+            /* margin: auto; */
         }
 
         header > ul {
             flex-direction: column;
+            padding: 0;
         }
 
         header > ul > li {
             margin-left: 0;
             margin-top: 1em;
         }
-        
 
         .hero {
-            height: auto;
             margin-bottom: 1em;
+            height: auto;
+            width: 135vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .container {
+            margin: 1.5em auto auto 1em;
         }
 
         section {
-            margin-top: 0;
+            /* margin-top: 0; */
+            margin-left: 8em;
+            /* margin: auto; */
         }
 
         .pros {
+            width: 400px;
             display: grid;
             grid-template-columns: 18em;
             grid-template-rows: 10em 10em 10em 10em 10em 10em;
@@ -523,34 +601,89 @@ a {
             justify-items: center;
         }
 
-        .gallery-grid {
-        grid-template-columns: 1fr 1fr; /* Single column for very small screens */
-    }
+        .title {
+            font-family: Roboto-thin;
+            font-weight: 100;
+            font-size: 3em;
+            width: 76%;
+            color: white;
+            margin-top: 6em;
+            margin-bottom: 0px;
+        }
+        
+        .slogan {
+            width: 50%;
+            margin-top: 0px;
+            font-size: 1.5em;
+            color: white;
+            font-family: Roboto-thin;
+            font-weight: 100;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+        }
+
+        .prev, .next {
+            top: 40%;
+        }
+
+        .whypr .kapec {
+            width: 90%;
+            flex-direction: column;
+            margin-left: 3em;
+        }
+
+        .whypr .kapec .centered h2 {
+            font-size: 1.2em;
+        }
+
+        .whypr .kapec .centered p {
+            font-size: 0.9em;
+        }
 
     .form-sec {
+        width: 100%;
         display: flex;
         flex-direction: column;
         /* justify-content: flex-start; */
         /* align-content: center; */
         align-items: center;
+        margin-left: 0;
     }
 
     .form-sec p {
-        width: 70%;
+        width: 100%;
     }
 
     .form-sec form {
-        width: 90%;
-        display: flex;
-        align-items: baseline;
-    }
-
-    .form-left, .form-right {
-        width: 40%;
+        width: 95%;
     }
 
     .contact-gallery {
         flex-direction: column;
+    }
+
+    .form-left, .form-right {
+        width: 100%;
+    }
+
+    .form-right button {
+        font-family: Roboto;
+        background-color: rgb(172, 90, 70);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    footer {
+        width: 135vw;
     }
 
 
@@ -559,12 +692,15 @@ a {
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-left: 3em;
+            /* margin-left: 4em; */
+            /* margin: auto; */
         }
 
         header > ul {
             flex-direction: column;
+            padding: 0;
         }
 
         header > ul > li {
@@ -573,60 +709,148 @@ a {
         }
 
         .hero {
-            margin-bottom: 6em;
+            margin-bottom: 1em;
             height: auto;
+            width: 135vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .container {
+            margin: 1.5em auto auto 1em;
         }
 
         section {
-            margin-top: 0;
+            /* margin-top: 0; */
+            margin-left: 8em;
+            /* margin: auto; */
         }
 
         .pros {
             display: grid;
-            grid-template-columns: 10em 20em;
+            grid-template-columns: 1fr 2fr;
             grid-template-rows: 10em 10em 10em;
-            margin-left: 0;
-            gap: 2em;
-            align-content: center;
+            margin-left: 7em;
             justify-content: center;
-            align-items: center;
-            justify-items: center;
+            justify-items: start;
+            gap: 5em;
         }
 
-        .gallery-grid {
-        grid-template-columns: 1fr 1fr 1fr; /* Single column for very small screens */
-    }
+        .title {
+            font-family: Roboto-thin;
+            font-weight: 100;
+            font-size: 3em;
+            width: 76%;
+            color: white;
+            margin-top: 6em;
+            margin-bottom: 0px;
+        }
+        
+        .slogan {
+            width: 50%;
+            margin-top: 0px;
+            font-size: 1.5em;
+            color: white;
+            font-family: Roboto-thin;
+            font-weight: 100;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+        }
+
+        .prev, .next {
+            top: 40%;
+        }
+
+        .whypr .kapec {
+            width: 90%;
+            flex-direction: column;
+            margin-left: 3em;
+        }
+
+        .whypr .kapec .centered h2 {
+            font-size: 1.7em;
+        }
+
+        .whypr .kapec .centered p {
+            font-size: 1.2em;
+        }
 
     .form-sec {
+        width: 100%;
         display: flex;
         flex-direction: column;
         /* justify-content: flex-start; */
         /* align-content: center; */
         align-items: center;
+        margin-left: 0;
     }
 
     .form-sec p {
-        width: 70%;
+        width: 100%;
     }
 
     .form-sec form {
-        width: 90%;
-        display: flex;
-        align-items: baseline;
-    }
-
-    .form-left, .form-right {
-        width: 40%;
+        width: 95%;
     }
 
     .contact-gallery {
         flex-direction: column;
-        /* width: 70%; */
-        /* display: flex; */
-        /* align-content: center; */
-        /* justify-content: flex-start; */
-        /* align-items: center; */
+    }
+
+    .form-left, .form-right {
+        width: 100%;
+    }
+
+    .form-right button {
+        font-family: Roboto;
+        background-color: rgb(172, 90, 70);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    footer {
+        width: 135vw;
     }
 
     }
   
+    @media only screen and (min-width: 1025px) and (max-width: 1440px)  {
+ 
+
+        .hero {
+            margin-bottom: 1em;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+
+       @media only screen and (min-width: 1025px) and (max-width: 1440px)  {
+ 
+
+        .hero {
+            margin-bottom: 1em;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+        @media only screen and (min-width: 2000px) {
+            .container {
+                margin-top: 27.5em;
+            }
+
+        }
