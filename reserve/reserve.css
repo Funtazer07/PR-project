@@ -1,647 +1,655 @@
 @font-face {
-    font-family: Roboto;
-    src: url("fonts/Roboto-Regular.woff") format("woff"), url("fonts/Roboto-Regular.woff2") format("woff2");
+	font-family: Roboto;
+	src: url("fonts/Roboto-Regular.woff") format("woff"), url("fonts/Roboto-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Roboto-thin;
-    src: url("fonts/Roboto-Light.woff") format("woff"), url("fonts/Roboto-Light.woff2") format("woff2");
+	font-family: Roboto-thin;
+	src: url("fonts/Roboto-Light.woff") format("woff"), url("fonts/Roboto-Light.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "icons";
-    src: url("fonts/Social-Media-Circled.woff") format("woff"),
-          url("fonts/Social-Media-Circled.woff2") format("woff2"); 
-        }
+	font-family: "icons";
+	src: url("fonts/Social-Media-Circled.woff") format("woff"),
+		url("fonts/Social-Media-Circled.woff2") format("woff2");
+}
 
 html {
-    box-sizing: border-box;
-    overflow-x: hidden;
+	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
 }
 
 header {
-    margin-top: 2em;
-    margin-left: 10em;
-    background-color: transparent;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
+	margin-top: 2em;
+	margin-left: 10em;
+	background-color: transparent;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	width: 80%;
+	justify-content: space-between;
 }
 
-header > ul {
-    font-family: Roboto;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    color: white;
+header>ul {
+	font-family: Roboto;
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	color: white;
 }
 
-header > ul > li {
-    margin-left: 1em;
+header>ul>li {
+	margin-left: 1em;
 }
 
 .hero {
-    background-image: url("images/bg.png");
-    background-size: cover;
-    height: 95vh;
-    width: 100%;
-    /* position: absolute; */
-    margin-bottom: -1.5em;
-    margin-top: 0;
+	background-image: url("images/bg.png");
+	background-size: cover;
+	height: 95vh;
+	width: 100%;
+	margin-bottom: -1.5em;
+	margin-top: 0;
 }
 
 section {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5em;
 }
 
 .container {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1.5em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5em;
 }
 
 .title {
-    font-family: Roboto-thin;
-    font-weight: 100;
-    font-size: 3.5em;
-    width: 55%;
-    color: white;
-    margin-top: 5em;
-    margin-bottom: 0px;
+	font-family: Roboto-thin;
+	font-weight: 100;
+	font-size: 3.5em;
+	width: 55%;
+	color: white;
+	margin-top: 5em;
+	margin-bottom: 0px;
 }
 
 .slogan {
-    margin-top: 0px;
-    font-size: 2em;
-    color: white;
-    font-family: Roboto-thin;
-    font-weight: 100;
+	margin-top: 0px;
+	font-size: 2em;
+	color: white;
+	font-family: Roboto-thin;
+	font-weight: 100;
 }
 
 .section {
-    margin-bottom: 3em;
+	margin-bottom: 3em;
 }
 
-.section > h1 {
-    font-weight: 100;
-    font-family: Roboto;
+.section>h1 {
+	font-weight: 100;
+	font-family: Roboto;
 }
 
-.section > hr {
-    margin-top: 0px;
-    width: 4.5em;
-    float: left;
-    border: 1px solid rgb(172, 90, 70);
+.section>hr {
+	margin-top: 0px;
+	width: 4.5em;
+	float: left;
+	border: 1px solid rgb(172, 90, 70);
 }
 
-/* .hero {
-    margin-bottom: 5em;
-} */
-
-.beige, .hero>.container>button {
-    font-family: Roboto;
-    background-color: rgb(172, 90, 70);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+.beige,
+.hero>.container>button {
+	font-family: Roboto;
+	background-color: rgb(172, 90, 70);
+	border: none;
+	border-radius: 12px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
 }
 
 .pros {
-    display: grid;
-    grid-template-columns: 10em 40em;
-    grid-template-rows: 10em 10em 10em;
-    margin-left: 7em;
-    justify-content: center;
-    justify-items: start;
-    gap: 5em;
+	display: grid;
+	grid-template-columns: 10em 40em;
+	grid-template-rows: 10em 10em 10em;
+	margin-left: 7em;
+	justify-content: center;
+	justify-items: start;
+	gap: 5em;
 }
 
 .text>h2 {
-    font-size: 1.5em;
-    font-family: Roboto;
-    font-weight: 100;
+	font-size: 1.5em;
+	font-family: Roboto;
+	font-weight: 100;
 }
 
 /* Gallery styles */
 .gallery-grid {
-    margin-top: 1.5em;
-    display: grid;
-    grid-template-columns: repeat(3, 20em); 
-    justify-content: center;
-    justify-items: start;
-    gap: 0.5em;
+	margin-top: 1.5em;
+	display: grid;
+	grid-template-columns: repeat(3, 20em);
+	justify-content: center;
+	justify-items: start;
+	gap: 0.5em;
 }
 
 .gallery-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer; /* Makes it clear the image is clickable */
-    transition: transform 0.3s ease;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	/* Makes it clear the image is clickable */
+	transition: transform 0.3s ease;
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	z-index: 1000;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content (the zoomed image) */
 .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
+	margin: auto;
+	display: block;
+	max-width: 80%;
+	max-height: 80%;
 }
 
 /* Caption for modal image */
 .caption-container {
-    text-align: center;
-    padding: 10px;
-    color: #ccc;
-    font-size: 16px;
+	text-align: center;
+	padding: 10px;
+	color: #ccc;
+	font-size: 16px;
 }
 
 /* Close button (X) */
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+	cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /* Previous/Next buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    transition: 0.3s;
-    user-select: none;
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	transition: 0.3s;
+	user-select: none;
 }
 
 .prev {
-    left: 0;
+	left: 0;
 }
 
 .next {
-    right: 0;
+	right: 0;
 }
 
-.prev:hover, .next:hover {
-    color: #bbb;
+.prev:hover,
+.next:hover {
+	color: #bbb;
 }
 
 
 .text {
-    font-family: Roboto;
-    font-weight: 100;
+	font-family: Roboto;
+	font-weight: 100;
 }
 
 .form-sec {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 .form-sec p {
-    width: 33%;
+	width: 33%;
 }
 
 .form-sec form {
-    width: 50%; /* Adjust the form width as needed */
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black; /* Add 1px border with AC5A46 color */
-    padding: 20px; /* Add some padding inside the form for a cleaner look */
-    border-radius: 5px; /* Optional: round the corners slightly */
+	width: 50%;
+	/* Adjust the form width as needed */
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid black;
+	/* Add 1px border with AC5A46 color */
+	padding: 20px;
+	/* Add some padding inside the form for a cleaner look */
+	border-radius: 5px;
+	/* Optional: round the corners slightly */
 }
 
-.form-left, .form-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 47%;
+.form-left,
+.form-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 47%;
 }
 
-.form-left label, .form-right label {
-    margin-bottom: 15px;
+.form-left label,
+.form-right label {
+	margin-bottom: 15px;
 }
 
 .form-right button {
-    margin-top: 15px; /* Adds space between the last label and button */
-    align-self: auto; /* Aligns the button to the left */
+	margin-top: 15px;
+	/* Adds space between the last label and button */
+	align-self: auto;
+	/* Aligns the button to the left */
 }
 
 .form-sec label {
-    font-family: Roboto;
-    font-weight: 100;
+	font-family: Roboto;
+	font-weight: 100;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="number"], #optionsSelect, #roomsSelect {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+#optionsSelect,
+#roomsSelect {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 
 .contact-gallery {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 2em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 2em;
 }
 
 h2 {
-    font-family: Roboto;
-    font-weight: 100;
-    font-size: 1em;
+	font-family: Roboto;
+	font-weight: 100;
+	font-size: 1em;
 }
 
 p {
-    font-family: Roboto;
-    font-weight: 100;
+	font-family: Roboto;
+	font-weight: 100;
 }
 
 .contact-gallery>ul {
-    list-style-type: none;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding: 0;
+	list-style-type: none;
+	margin-left: 1em;
+	margin-right: 1em;
+	padding: 0;
 }
 
 .contact-gallery>picture {
-    width: 300px;
-    margin-right: 0;
+	width: 300px;
+	margin-right: 0;
 }
 
 .contact-gallery>picture>img {
-    width: 300px;
+	width: 300px;
 }
 
 .beige-text {
-    color: rgba(172, 90, 70, 0.67);
+	color: rgba(172, 90, 70, 0.67);
 }
 
 .contact-details>hr {
-    border: 1px solid rgba(172, 90, 70, 0.67);
+	border: 1px solid rgba(172, 90, 70, 0.67);
 }
 
 .contact-details>li>a {
-    font-family: Roboto;
-    color: black;
+	font-family: Roboto;
+	color: black;
 }
 
 footer {
-    background-color: rgb(172, 90, 70);
+	background-color: rgb(172, 90, 70);
 }
 
-footer ul{
-    margin-left: 6em;
-    list-style-type: none;
+footer ul {
+	margin-left: 6em;
+	list-style-type: none;
 }
 
 footer>ul>li {
-    font-family: "icons";
-    margin: 10px;
+	font-family: "icons";
+	margin: 10px;
 }
 
 footer>ul>li>a {
-    font-family: Roboto;
-    color: black;
+	font-family: Roboto;
+	color: black;
 }
 
 a {
-    font-family: Roboto;
-    color: white;
+	font-family: Roboto;
+	color: white;
 }
 
 
-    @media only screen and (max-width: 600px) {  
+@media only screen and (max-width: 600px) {
 
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 5em;
-        }
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 5em;
+	}
 
-        header > ul {
-            flex-direction: column;
-            padding: 0;
-        }
+	header>ul {
+		flex-direction: column;
+		padding: 0;
+	}
 
-        header > ul > li {
-            margin-left: 0;
-            margin-top: 1em;
-        }
+	header>ul>li {
+		margin-left: 0;
+		margin-top: 1em;
+	}
 
-        .hero {
-            margin-bottom: 1em;
-            height: auto;
-            width: 135vw;
-            margin-left: auto;
-            margin-right: auto;
-        }
+	.hero {
+		margin-bottom: 1em;
+		height: auto;
+		width: 135vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-        section {
-            margin-top: 0;
-            margin-left: 5em;
-        }
+	section {
+		margin-top: 0;
+		margin-left: 5em;
+	}
 
-        .pros {
-            width: 400px;
-            display: grid;
-            grid-template-columns: 18em;
-            grid-template-rows: 10em 10em 10em 10em 10em 10em;
-            margin-left: 0;
-            gap: 2em;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-        }
+	.pros {
+		width: 400px;
+		display: grid;
+		grid-template-columns: 18em;
+		grid-template-rows: 10em 10em 10em 10em 10em 10em;
+		margin-left: 0;
+		gap: 2em;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+	}
 
-        .title {
-            font-family: Roboto-thin;
-            font-weight: 100;
-            font-size: 3em;
-            width: 63%;
-            color: white;
-            margin-top: 6em;
-            margin-bottom: 0px;
-        }
-        
-        .slogan {
-            margin-top: 0px;
-            font-size: 1.5em;
-            color: white;
-            font-family: Roboto-thin;
-            font-weight: 100;
-        }
+	.title {
+		font-family: Roboto-thin;
+		font-weight: 100;
+		font-size: 3em;
+		width: 63%;
+		color: white;
+		margin-top: 6em;
+		margin-bottom: 0px;
+	}
 
-        .gallery {
-            margin-top: 0;
-        }
+	.slogan {
+		margin-top: 0px;
+		font-size: 1.5em;
+		color: white;
+		font-family: Roboto-thin;
+		font-weight: 100;
+	}
 
-        .gallery-grid {
-        margin-left: 2em;
-        grid-template-columns: 1fr; /* Single column for very small screens */
-    }
+	.gallery {
+		margin-top: 0;
+	}
 
-    .form-sec {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-start; */
-        /* align-content: center; */
-        align-items: center;
-    }
+	.gallery-grid {
+		margin-left: 2em;
+		grid-template-columns: 1fr;
+		/* Single column for very small screens */
+	}
 
-    .form-sec p {
-        width: 95%;
-    }
+	.form-sec {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .form-sec form {
-        width: 95%;
-    }
+	.form-sec p {
+		width: 95%;
+	}
 
-    .contact-gallery {
-        flex-direction: column;
-    }
+	.form-sec form {
+		width: 95%;
+	}
 
-    .form-left, .form-right {
-        width: 40%;
-    }
+	.contact-gallery {
+		flex-direction: column;
+	}
 
-    .form-right button {
-        font-family: Roboto;
-        background-color: rgb(172, 90, 70);
-        border: none;
-        border-radius: 12px;
-        color: white;
-        padding: 15px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-    }
+	.form-left,
+	.form-right {
+		width: 40%;
+	}
 
-    footer {
-        width: 135vw;
-    }
-        
-    }
-  
-    @media only screen and (min-width: 601px) and (max-width: 768px) {  
-        header {
-            display: flex;
-            align-items: center;
-            margin-left: 3em;
-        }
+	.form-right button {
+		font-family: Roboto;
+		background-color: rgb(172, 90, 70);
+		border: none;
+		border-radius: 12px;
+		color: white;
+		padding: 15px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+	}
 
-        header > ul {
-            flex-direction: column;
-        }
+	footer {
+		width: 135vw;
+	}
 
-        header > ul > li {
-            margin-left: 0;
-            margin-top: 1em;
-        }
-        
+}
 
-        .hero {
-            height: auto;
-            margin-bottom: 1em;
-        }
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+	header {
+		display: flex;
+		align-items: center;
+		margin-left: 3em;
+	}
 
-        section {
-            margin-top: 0;
-        }
+	header>ul {
+		flex-direction: column;
+	}
 
-        .pros {
-            display: grid;
-            grid-template-columns: 18em;
-            grid-template-rows: 10em 10em 10em 10em 10em 10em;
-            margin-left: 0;
-            gap: 2em;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-        }
-
-        .gallery-grid {
-        grid-template-columns: 1fr 1fr; /* Single column for very small screens */
-    }
-
-    .form-sec {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-start; */
-        /* align-content: center; */
-        align-items: center;
-    }
-
-    .form-sec p {
-        width: 70%;
-    }
-
-    .form-sec form {
-        width: 90%;
-        display: flex;
-        align-items: baseline;
-    }
-
-    .form-left, .form-right {
-        width: 40%;
-    }
-
-    .contact-gallery {
-        flex-direction: column;
-    }
+	header>ul>li {
+		margin-left: 0;
+		margin-top: 1em;
+	}
 
 
-    }
-  
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        header {
-            display: flex;
-            align-items: center;
-            margin-left: 3em;
-        }
+	.hero {
+		height: auto;
+		margin-bottom: 1em;
+	}
 
-        header > ul {
-            flex-direction: column;
-        }
+	section {
+		margin-top: 0;
+	}
 
-        header > ul > li {
-            margin-left: 0;
-            margin-top: 1em;
-        }
+	.pros {
+		display: grid;
+		grid-template-columns: 18em;
+		grid-template-rows: 10em 10em 10em 10em 10em 10em;
+		margin-left: 0;
+		gap: 2em;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+	}
 
-        .hero {
-            margin-bottom: 6em;
-            height: auto;
-        }
+	.gallery-grid {
+		grid-template-columns: 1fr 1fr;
+		/* Single column for very small screens */
+	}
 
-        section {
-            margin-top: 0;
-        }
+	.form-sec {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-        .pros {
-            display: grid;
-            grid-template-columns: 10em 20em;
-            grid-template-rows: 10em 10em 10em;
-            margin-left: 0;
-            gap: 2em;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-        }
+	.form-sec p {
+		width: 70%;
+	}
 
-        .gallery-grid {
-        grid-template-columns: 1fr 1fr 1fr; /* Single column for very small screens */
-    }
+	.form-sec form {
+		width: 90%;
+		display: flex;
+		align-items: baseline;
+	}
 
-    .form-sec {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-start; */
-        /* align-content: center; */
-        align-items: center;
-    }
+	.form-left,
+	.form-right {
+		width: 40%;
+	}
 
-    .form-sec p {
-        width: 70%;
-    }
+	.contact-gallery {
+		flex-direction: column;
+	}
 
-    .form-sec form {
-        width: 90%;
-        display: flex;
-        align-items: baseline;
-    }
 
-    .form-left, .form-right {
-        width: 40%;
-    }
+}
 
-    .contact-gallery {
-        flex-direction: column;
-        /* width: 70%; */
-        /* display: flex; */
-        /* align-content: center; */
-        /* justify-content: flex-start; */
-        /* align-items: center; */
-    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	header {
+		display: flex;
+		align-items: center;
+		margin-left: 3em;
+	}
 
-    }
-  
-    @media only screen and (min-width: 1025px) and (max-width: 1440px)  {
- 
+	header>ul {
+		flex-direction: column;
+	}
 
-        .hero {
-            margin-bottom: 1em;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
+	header>ul>li {
+		margin-left: 0;
+		margin-top: 1em;
+	}
 
-    }
+	.hero {
+		margin-bottom: 6em;
+		height: auto;
+	}
 
-        @media only screen and (min-width: 2000px) {
-            .container {
-                margin-top: 27.5em;
-            }
+	section {
+		margin-top: 0;
+	}
 
-        }
+	.pros {
+		display: grid;
+		grid-template-columns: 10em 20em;
+		grid-template-rows: 10em 10em 10em;
+		margin-left: 0;
+		gap: 2em;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.gallery-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+		/* Single column for very small screens */
+	}
+
+	.form-sec {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form-sec p {
+		width: 70%;
+	}
+
+	.form-sec form {
+		width: 90%;
+		display: flex;
+		align-items: baseline;
+	}
+
+	.form-left,
+	.form-right {
+		width: 40%;
+	}
+
+	.contact-gallery {
+		flex-direction: column;
+	}
+
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+
+	.hero {
+		margin-bottom: 1em;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+@media only screen and (min-width: 2000px) {
+	.container {
+		margin-top: 27.5em;
+	}
+
+}
