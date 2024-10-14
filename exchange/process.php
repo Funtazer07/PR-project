@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rooms = isset($_POST["istabas"]) ? $_POST["istabas"] : '';
     $rooms1 = isset($_POST["customRoom"]) ? $_POST["customRoom"] : '';
     $area = isset($_POST["area"]) ? $_POST["area"] : '';
-    $toEmail = "a.dvoskins@student.fontys.nl";  // Put your email
+    $toEmail = "sales1@piekrastarezidence.lv";  // Put your email
 
     // Prepare email headers
     $mailHeaders = "Name: " . $userName .
